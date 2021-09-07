@@ -1,55 +1,32 @@
 
-# Francisco calcula vao regulador
-# Raiz((v1)^3+(v2)^3+(v3)^3..../v1+v2+v3....)
+# Copyright Francisco Arnaldo S. Araujo
+# e-mail: netservicero@gmail.com
+# technologist in electrical systems
+# calcula vao regulador
+# raiz(v1)^3+(v2)^2+(v3)^3.../v1+v2+v3)
 
 import math
 
-arnapegacota = 0
-arnasoma = 0
+arnapegavao = 0
+arnasomavao = 0
 arnacubo = 0
-arnaconta_cubo = 0
-arnacontinua = "S"
+arnasoma_cubo = 0
+arna_again = 'S'
 
-while arnacontinua == "S":
-    arnapegacota = float(input("Entre com o vao em [metros] entre postes..: "))
-    arnacontinua = str(input("Proximo vao [S/N]")).upper()
-    arnasoma += arnapegacota
+# funcao calcula componente horizontal do vento
+#def vento(vao):
+#    math.sqrt()
 
-    arnacubo = arnacubo + (arnapegacota ** 3)
-    arnaconta_cubo += arnacubo
+while arna_again == 'S':
+    arnapegavao = float(input("informe o vão em metros..:"))
+    arna_again = str(input("Continua [S/N]")).upper()
+    arnasomavao += arnapegavao
+    arnacubo += (arnapegavao **3)
+    arnasoma_cubo += arnacubo
     arnacubo = 0
 else:
-     print("Vao acumulado em metros..: {}".format(arnasoma))
-     print("Vao Regulador.: {}".format(math.sqrt(arnaconta_cubo/arnasoma)))
-
-# Entra com parametros gerais
-
-# Velocidade do vento (m/s)
-# Diametro do cabo (mm)
-# Peso do cabo (kg/km)
-# Flecha (%)
-# Resultado = tracao [kfg]
-
-arnavento = 0
-arnadimfo = 0
-arnapesofo = 0
-arnaflecha = 0
-
-#arnavento = float(input("Entre com velocidade do vento [m/s] ..:"))
-#arnadimfo = float(input("Entre com diametro do cabo [mm] ..:"))
-#arnapesofo = float(input("Entre com peso do cabo [kg/km] ..:"))
-arnaflecha = float(input("Entre com a flecha [%]..:"))
-
-print("flecha %..: {}".format(arnaflecha/100))
+    print("total do vao acumulado..: {}".format(arnasomavao))
+    print("Vao regulador ..: {}".format(math.sqrt(arnasoma_cubo/arnasomavao)))
 
 
 
-#for mostra in range(1,5):
-#    print(mostra)
-#print("fim")
-
-#familia = ["Matheus", "Ryan", "Renan"]
-
-#for membros in familia:
-#    print(membros)
-#print("fim")
